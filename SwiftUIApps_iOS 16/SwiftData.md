@@ -2,7 +2,7 @@
 The new SwiftData framework makes it easy to persist data using declarative code. You can query and filter data using regular Swift code. And it’s designed to integrate seamlessly with SwiftUI.
 
 ## Create models with Swift
-Model your data using regular Swift types with @Model, with no additional files or tools to manage. SwiftData can automatically infer many relationships and you can use clear declarations like `@Attribute(.unique)` to describe constraints. Like SwiftUI, the source of truth is in your code.
+Model your data using regular Swift types with `@Model`, with no additional files or tools to manage. **SwiftData** can automatically infer many relationships and you can use clear declarations like `@Attribute(.unique)` to describe constraints. Like **SwiftUI**, the source of truth is in your code.
 
 
 `
@@ -15,12 +15,12 @@ class Recipe {
 `
 
 ## Automatic persistence
-SwiftData builds a custom schema using your models and maps their fields efficiently to the underlying storage. Objects managed by SwiftData are fetched from the database when needed and automatically saved at the right moment, with no additional work on your part. You can also take full control using the ModelContext API.
+SwiftData builds a custom schema using your models and maps their fields efficiently to the underlying storage. **Objects** managed by **SwiftData** are fetched from the database when needed and** automatically saved** at the right moment, with no additional work on your part. You can also take full control using the **ModelContext** API.
 
 
 
 ## Integrates with SwiftUI
-Use `@Query` in your SwiftUI views to fetch data. SwiftData and SwiftUI work together to provide live updates to your views when the underlying data changes, with no need to manually refresh the results.
+Use `@Query` in your SwiftUI views to **fetch data**. SwiftData and SwiftUI work together to provide live updates to your views when the underlying data changes, with **no need to manually refresh the results.**
 
 
 `
@@ -44,7 +44,7 @@ let simpleFood = #Predicate<Recipe> { recipe in
 `
 
 ## CloudKit syncing
-Your data can be stored in files using DocumentGroup and synced via iCloud Drive, or you can use CloudKit to sync data between devices.
+Your data can be stored in files using **DocumentGroup** and synced via **iCloud Drive**, or you can use **CloudKit** to sync data between devices.
 
 
 
