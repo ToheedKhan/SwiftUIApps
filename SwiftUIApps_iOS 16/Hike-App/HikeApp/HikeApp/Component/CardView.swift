@@ -46,29 +46,33 @@ struct CardView: View {
             
             VStack(alignment: .leading) {
               HStack {
-                Text("Hiking")
-                  .fontWeight(.black)
-                  .font(.system(size: 52))
-                  .foregroundStyle(
-                    LinearGradient(
-                      colors: [
-                        .customGrayLight,
-                        .customGrayMedium],
-                      startPoint: .top,
-                      endPoint: .bottom)
-                  )
-                
-                Spacer()
-                
-                Button {
-                  // ACTION: Show a Sheet
-                  print("The button was pressed.")
-                  isShowingSheet.toggle()
-                } label: {
-                  CustomButtonView()
+                  Text("Hiking")
+                    .fontWeight(.black)
+                    .font(.system(size: 52))
+                    .foregroundStyle(
+                      LinearGradient(
+                        colors: [
+                          .customGrayLight,
+                          .customGrayMedium],
+                        startPoint: .top,
+                        endPoint: .bottom)
+                    )
+                  
+                  Spacer()
+                  
+                  Button {
+                    // ACTION: Show a Sheet
+                    print("The button was pressed.")
+                    isShowingSheet.toggle()
+                  } label: {
+                    CustomButtonView()
+                  }
+                  .sheet(isPresented: $isShowingSheet) {
+                    SettingsView()
+                      .presentationDragIndicator(.visible)
+                      .presentationDetents([.medium, .large])
+                  }
                 }
-                
-              }
               
               Text("Fun and enjoyable outdoor activity for friends and families.")
                 .multilineTextAlignment(.leading)
