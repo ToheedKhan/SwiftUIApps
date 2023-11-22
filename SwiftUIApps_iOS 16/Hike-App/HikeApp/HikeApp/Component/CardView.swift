@@ -19,7 +19,10 @@ struct CardView: View {
     func randomImage() {
       print("--- BUTTON WAS PRESSED ---")
       print("Status: Old Image Number = \(imageNumber)")
-      
+      /*
+       We can avoid getting the same image number using the swift while and repeat loop.
+       Every time the random number is the same as the image number, then it generates a new random number.
+       */
       repeat {
         randomNumber = Int.random(in: 1...5)
         print("Action: Random Number Generated = \(randomNumber)")
@@ -74,7 +77,40 @@ struct CardView: View {
             } //: HEADER
             .padding(.horizontal, 30)
             
-           
+              // MARK: - MAIN CONTENT
+              
+              ZStack {
+                CustomCircleView()
+                
+                Image("image-\(imageNumber)")
+                  .resizable()
+                  .scaledToFit()
+                  .animation(.default, value: imageNumber)
+              }
+              
+              // MARK: - FOOTER
+              
+              Button {
+                // ACTION: Generate a random number
+                
+                randomImage()
+              } label: {
+                Text("Explore More")
+                  .font(.title2)
+                  .fontWeight(.heavy)
+                  .foregroundStyle(
+                    LinearGradient(
+                      colors: [
+                        .customGreenLight,
+                        .customGreenMedium
+                      ],
+                      startPoint: .top,
+                      endPoint: .bottom
+                    )
+                  )
+                  .shadow(color: .black.opacity(0.25), radius: 0.25, x: 1, y: 2)
+              }
+              .buttonStyle(GradientButton())
             
           } //: ZSTACK
         } //: CARD
