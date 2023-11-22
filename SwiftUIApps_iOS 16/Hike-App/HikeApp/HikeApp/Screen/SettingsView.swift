@@ -78,8 +78,11 @@ struct SettingsView: View {
             Section(header: Text("Alternate Icons")) {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 12) {
+                        
                         ForEach(alternateAppIcons.indices, id: \.self) { item in
                             Button {
+                                if UIApplication.shared.supportsAlternateIcons {
+                                    print("Supported")                        }
                                 print("Icon \(alternateAppIcons[item]) was pressed.")
                              //To change app icon
                                 UIApplication.shared.setAlternateIconName("AppIcon-Campfire") { error in
