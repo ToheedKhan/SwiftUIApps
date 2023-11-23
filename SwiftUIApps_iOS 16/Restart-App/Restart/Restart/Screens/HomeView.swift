@@ -11,17 +11,56 @@ struct HomeView: View {
     // MARK: - PROPERTY
     
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = false
-    
+    // MARK: - BODY
     var body: some View {
-        VStack {
-            Text("Home")
-                .font(.largeTitle)
+        VStack(spacing: 20) {
+            // MARK: - HEADER
+            Spacer()
             
+            Image("character-2")
+              .resizable()
+              .scaledToFit()
+              .padding()
+
+            // MARK: - CENTER
+            Text("The time that leads to mastery is dependent on the intensity of our focus.")
+              .font(.title3)
+              .fontWeight(.light)
+              .foregroundColor(.secondary)
+              .multilineTextAlignment(.center)
+              .padding()
+
+            // MARK: - FOOTER
+            
+            Spacer()
+
+            /*
+             The accent color always determines the color of the button.
+             Please keep in mind the following rule.
+             Suppose there is no custom accent color defined in the project's assets catalog.
+             In that case, each UI element inherits a default color from the system, which apple may change any
+             time in the future.
+             Since we created a custom blue color.
+             Therefore we can see this used by this button.
+             */
             Button(action: {
                 isOnboardingViewActive = true
             }) {
+                /*
+                 Please notice that we did not have to wrap the image in the text views into a horizontal stack container.
+                 The reason behind that, when we use two or more UI elements inside as a button label, then Swiftui
+                 automatically renders the horizontal stack layout for it.
+                 */
+                Image(systemName: "arrow.triangle.2.circlepath.circle.fill")
+                  .imageScale(.large)
                Text("Restart")
-            }
+                    .font(.system(.title3, design: .rounded))
+                    .fontWeight(.bold)
+                } //: BUTTON
+            .buttonStyle(.borderedProminent)
+            .buttonBorderShape(.capsule)
+            .controlSize(.large)
+
 
         }//: VStack
     }
