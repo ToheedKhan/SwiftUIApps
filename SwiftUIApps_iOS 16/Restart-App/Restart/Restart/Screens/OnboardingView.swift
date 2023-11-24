@@ -16,6 +16,7 @@ struct OnboardingView: View {
     @State private var buttonOffset: CGFloat = 0
     
     @State private var isAnimating: Bool = false
+    @State private var imageOffset: CGSize = .zero
     
     var body: some View {
         ZStack {
@@ -26,21 +27,21 @@ struct OnboardingView: View {
                 // MARK: - HEADER
                 
                 Spacer()
-            
+                
                 VStack(spacing: 0) {
                     Text("Share.")
                         .font(.system(size:60))
-                            .fontWeight(.heavy)
-                            .foregroundColor(.white)
+                        .fontWeight(.heavy)
+                        .foregroundColor(.white)
                     Text("""
                     It's not how much we give but
                     how much love we put into giving.
                     """)
-                      .font(.title3)
-                      .fontWeight(.light)
-                      .foregroundColor(.white)
-                      .multilineTextAlignment(.center)
-                      .padding(.horizontal, 10)
+                    .font(.title3)
+                    .fontWeight(.light)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 10)
                 } //: HEADER
                 .opacity(isAnimating ? 1 : 0)
                 .offset(y: isAnimating ? 0 : -40)
@@ -55,11 +56,35 @@ struct OnboardingView: View {
                     //Ring
                     CircleGroupView(ShapeColor: .white, ShapeOpacity: 0.2)
                     Image("character-1")
-                      .resizable()
-                      .scaledToFit()
-                      .opacity(isAnimating ? 1 : 0)
-                      .animation(.easeOut(duration: 0.5), value: isAnimating)
+                        .resizable()
+                        .scaledToFit()
+                        .opacity(isAnimating ? 1 : 0)
+                        .animation(.easeOut(duration: 0.5), value: isAnimating)
+                        .offset(x: imageOffset.width * 1.2, y: 0)
+                        .gesture(
+                            DragGesture()
+                                .onChanged { gesture in
+                                    /*
+                                     Please keep in mind that this gestures translation provides us the necessary information about the total
+                                     movement from the start of the drag gesture to the current event of the drag gesture.
+                                     From now on we can store and update this information with the image offset property and the only thing
+                                     that we need to do after this to move the image horizontally is to add a new offset modifier to it.
+                                     */
+                                    if abs(imageOffset.width) <= 150 {
+                                        imageOffset = gesture.translation
+                                    }
+                                   
+                                }
+                                .onEnded { _ in
+                                  imageOffset = .zero
+                                  
+                             
+                                }
+                            ) //: GESTURE
+                            .animation(.easeOut(duration: 1), value: imageOffset)
                 }//: CENTER
+                
+                
                 
                 Spacer()
                 
@@ -78,10 +103,10 @@ struct OnboardingView: View {
                     // 2. CALL-TO-ACTION (STATIC)
                     
                     Text("Get Started")
-                      .font(.system(.title3, design: .rounded))
-                      .fontWeight(.bold)
-                      .foregroundColor(.white)
-                      .offset(x: 20)
+                        .font(.system(.title3, design: .rounded))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .offset(x: 20)
                     
                     // 3. CAPSULE (DYNAMIC WIDTH)
                     
@@ -94,7 +119,7 @@ struct OnboardingView: View {
                     }//: HStack
                     
                     // 4. CIRCLE (DRAGGABLE)
-
+                    
                     HStack {
                         ZStack {
                             Circle()
@@ -112,23 +137,23 @@ struct OnboardingView: View {
                         .frame(width: 80, height: 80, alignment: .center)
                         .offset(x:buttonOffset)
                         .gesture (
-                           DragGesture()
-                            .onChanged{ gesture in
-                                if gesture.translation.width > 0 && buttonOffset <= buttonWidth - 80 {
-                                    //80 bcz red button size is 80X80
-                                    buttonOffset = gesture.translation.width
-                                }
-                            }.onEnded{ _ in
-                                withAnimation(Animation.easeOut(duration: 0.4)) {
-                                    if buttonOffset > buttonWidth / 2 {
-                                        buttonOffset = buttonWidth - 80
-                                        isOnboardingViewActive = false
-                                    } else {
-                                        buttonOffset  = 0
+                            DragGesture()
+                                .onChanged{ gesture in
+                                    if gesture.translation.width > 0 && buttonOffset <= buttonWidth - 80 {
+                                        //80 bcz red button size is 80X80
+                                        buttonOffset = gesture.translation.width
                                     }
-                                }
-                                
-                            } //Animation: OnEnded
+                                }.onEnded{ _ in
+                                    withAnimation(Animation.easeOut(duration: 0.4)) {
+                                        if buttonOffset > buttonWidth / 2 {
+                                            buttonOffset = buttonWidth - 80
+                                            isOnboardingViewActive = false
+                                        } else {
+                                            buttonOffset  = 0
+                                        }
+                                    }
+                                    
+                                } //Animation: OnEnded
                         )//: GESTURE
                         
                         Spacer()
@@ -139,13 +164,13 @@ struct OnboardingView: View {
                 .opacity(isAnimating ? 1 : 0)
                 .offset(y: isAnimating ? 0 : 40)
                 .animation(.easeOut(duration: 1), value: isAnimating)
-
-        }//: VStack
-    }//: ZStack
+                
+            }//: VStack
+        }//: ZStack
         .onAppear {
             isAnimating = true
         }
-}
+    }
 }
 
 struct OnboardingView_Previews: PreviewProvider {
