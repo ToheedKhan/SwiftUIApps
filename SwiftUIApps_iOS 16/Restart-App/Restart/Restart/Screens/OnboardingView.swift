@@ -15,6 +15,8 @@ struct OnboardingView: View {
     @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80
     @State private var buttonOffset: CGFloat = 0
     
+    @State private var isAnimating: Bool = false
+    
     var body: some View {
         ZStack {
             Color("ColorBlue")
@@ -40,6 +42,12 @@ struct OnboardingView: View {
                       .multilineTextAlignment(.center)
                       .padding(.horizontal, 10)
                 } //: HEADER
+                .opacity(isAnimating ? 1 : 0)
+                .offset(y: isAnimating ? 0 : -40)
+                /*
+                 Basically, we have to tell the program what value that causes the change in the animation.
+                 */
+                .animation(.easeOut(duration: 1), value: isAnimating)
                 
                 // MARK: - CENTER
                 
@@ -128,6 +136,9 @@ struct OnboardingView: View {
 
         }//: VStack
     }//: ZStack
+        .onAppear {
+            isAnimating = true
+        }
 }
 }
 
