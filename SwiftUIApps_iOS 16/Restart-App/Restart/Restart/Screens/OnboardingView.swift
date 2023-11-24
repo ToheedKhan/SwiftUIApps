@@ -243,6 +243,8 @@ struct OnboardingView: View {
         .onAppear {
             isAnimating = true
         }
+        .preferredColorScheme(.dark)
+        //Shift + cmd + A
     }
 }
 
