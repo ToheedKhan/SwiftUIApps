@@ -61,6 +61,20 @@ struct OnboardingView: View {
                         .opacity(isAnimating ? 1 : 0)
                         .animation(.easeOut(duration: 0.5), value: isAnimating)
                         .offset(x: imageOffset.width * 1.2, y: 0)
+                    /*
+                     Swiftui has a rotation effect and this new rotation effect modifier rotates a view
+                     around a specific point.
+                     This rotation effect has two parameters.
+                     The first parameter is the angle, and the second parameter is the anchor.
+                     In this case, we are only using the angle parameter by specifying the degree to set how much the image
+                     should be rotated.
+                     
+                     We don't need to specify the anchor because its default location is the center, which is precisely
+                     what we want.
+                     As far as the rotations degree, we want to use a dynamic value and we can do it with the size of the
+                     image offset divided by 20.
+                     */
+                        .rotationEffect(.degrees(Double(imageOffset.width / 20)))
                         .gesture(
                             DragGesture()
                                 .onChanged { gesture in
