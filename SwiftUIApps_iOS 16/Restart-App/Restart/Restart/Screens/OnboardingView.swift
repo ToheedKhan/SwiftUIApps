@@ -19,6 +19,8 @@ struct OnboardingView: View {
     @State private var imageOffset: CGSize = .zero
     @State private var indicatorOpacity: Double = 1.0
     
+    @State private var textTitle: String = "Share."
+    
     var body: some View {
         ZStack {
             Color("ColorBlue")
@@ -28,12 +30,35 @@ struct OnboardingView: View {
                 // MARK: - HEADER
                 
                 Spacer()
+                /*
+                 In general, we know that Swiftui does a fantastic job when it comes to monitoring each view and property
+                 change that can occur while running the application.
+                 However, when we change the value of any text view, it turns out that Swiftui works differently.
+                 The problem that prevents triggering the opacity transition is the following.
+                 Swiftui does not consider this string value change to a view change.
+                 Yes, we are changing the value of this text from the word share to the word gif.
+                 However, the program still considers this text view the same, which is the source of the problem.
+                 Logically, we think that changing the string value makes this text view different, but in reality
+                 the Swiftui framework recognizes it the same and that is why we could not trigger the opacity transition.
+                 To fix this we can use.
+                 Identifiable views.
+                 */
                 
+                /*
+                 Every Swiftui view has got a particular method so called ID and the ID methods job is to
+                 bind the views identity to the given proxy value.
+               
+                 We use the ID method to tell Swiftui that a view is no longer the same view, and by doing that we can
+                 trigger the desired opacity transition.
+                 */
                 VStack(spacing: 0) {
-                    Text("Share.")
-                        .font(.system(size:60))
+                    Text(textTitle)
+                        .font(.system(size: 60))
                         .fontWeight(.heavy)
                         .foregroundColor(.white)
+                        .transition(.opacity)
+                    //Identifiable Views
+                        .id(textTitle)
                     Text("""
                     It's not how much we give but
                     how much love we put into giving.
@@ -105,6 +130,7 @@ struct OnboardingView: View {
                                         
                                         withAnimation(.linear(duration: 0.25)) {
                                             indicatorOpacity = 0
+                                            textTitle = "Give."
                                         }
                                     }
                                    
@@ -114,6 +140,7 @@ struct OnboardingView: View {
                                   
                                     withAnimation(.linear(duration: 0.25)) {
                                         indicatorOpacity = 1
+                                        textTitle = "Share."
                                     }
 
                                 }
