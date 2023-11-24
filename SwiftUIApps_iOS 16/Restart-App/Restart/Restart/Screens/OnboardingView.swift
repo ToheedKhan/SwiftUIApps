@@ -55,6 +55,21 @@ struct OnboardingView: View {
                 ZStack {
                     //Ring
                     CircleGroupView(ShapeColor: .white, ShapeOpacity: 0.2)
+                    /*
+                     since we would like to move the ring in the opposite direction than the dragging, therefore
+                      make the offsets value the opposite.
+                     
+                     So when users drag the graphic to the left direction, then the rings offset value must be in the positive
+                     number range.
+                     On the contrary, when users drag the graphic in the right direction, then the rings offset value must
+                     be in the negative number range.
+                     
+                     This bi directional movement creates an illusion of viewport changing, and the combination of these
+                     actions will create an advanced horizontal parallax effect at the end.
+                     */
+                        .offset(x: imageOffset.width * -1)
+                        .blur(radius: abs(imageOffset.width / 5))
+                        .animation(.easeOut(duration: 1), value: imageOffset)
                     Image("character-1")
                         .resizable()
                         .scaledToFit()
