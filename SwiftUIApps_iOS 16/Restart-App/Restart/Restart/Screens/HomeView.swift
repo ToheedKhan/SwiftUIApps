@@ -57,6 +57,7 @@ struct HomeView: View {
              Therefore we can see this used by this button.
              */
             Button(action: {
+                playSound(sound: "success", type: "m4a")
                 isOnboardingViewActive = true
             }) {
                 /*
