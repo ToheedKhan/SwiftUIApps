@@ -42,7 +42,7 @@ struct OnboardingView: View {
                 
                 ZStack {
                     //Ring
-                    
+                    CircleGroupView(ShapeColor: .white, ShapeOpacity: 0.2)
                     Image("character-1")
                       .resizable()
                       .scaledToFit()
