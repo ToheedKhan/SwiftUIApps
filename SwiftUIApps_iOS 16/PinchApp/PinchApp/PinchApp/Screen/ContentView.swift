@@ -84,6 +84,27 @@ struct ContentView: View {
                 , alignment: .top
                 
             )
+
+            
+            // MARK: - CONTROLS
+            .overlay(
+                Group {
+                    HStack {
+                        // SCALE DOWN
+                        Button {
+                            // Some action
+                        } label: {
+                            Image(systemName: "minus.magnifyingglass")
+                                .font(.system(size: 36))
+                        }
+                        // RESET
+                        
+                        // SCALE UP
+                        
+                    } //: CONTROLS
+                }
+                    .padding(.bottom, 30)
+                , alignment: .bottom)
         } //: NAVIGATION
         .navigationViewStyle(.stack)
     }
