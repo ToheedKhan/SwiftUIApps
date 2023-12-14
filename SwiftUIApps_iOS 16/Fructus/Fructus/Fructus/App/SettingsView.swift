@@ -37,13 +37,20 @@ struct SettingsView: View {
                   
                   GroupBox(
                     label:
-                        HStack {
-                            Text("Fructus".uppercased()).fontWeight(.bold)
-                            Spacer()
-                            Image(systemName: "info.circle")
-                    } //: HSTACK
+                        SettingsLabelView(labelText: "Fructus", labelImage: "info.circle")
                   ) {
-                      Text("Hello, World!")
+                      Divider().padding(.vertical, 4)
+                      
+                      HStack(alignment: .center, spacing: 10) {
+                          Image("logo")
+                              .resizable()
+                              .scaledToFit()
+                              .frame(width: 80, height: 80)
+                              .cornerRadius(9)
+                          
+                          Text("If you wish, you can restart the application by toggle the switch in this box. That way it starts the onboarding process and you will see the welcome screen again.")
+                              .font(.footnote)
+                      } //: HSTACK
 
                   }
                   // MARK: - SECTION 2
