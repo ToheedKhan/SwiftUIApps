@@ -24,8 +24,6 @@ struct ContentView: View {
                   FruitRowView(fruit: item)
                       .padding(.vertical, 4)
               }
-              FruitRowView(fruit: item)
-                .padding(.vertical, 4)
           }
         }
         .navigationTitle("Fruits")
