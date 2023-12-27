@@ -41,6 +41,10 @@ struct ContentView: View {
         
       } //: NAVIGATION
       .navigationViewStyle(StackNavigationViewStyle())
+        /* To Support on iPad
+         This will make sure that the navigation will be stacked and there will be no sidebars and sliding panels
+         on the white screen.
+         */
     }
 }
 
