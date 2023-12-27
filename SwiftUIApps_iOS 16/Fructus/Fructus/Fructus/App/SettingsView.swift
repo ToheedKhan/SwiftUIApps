@@ -55,6 +55,27 @@ struct SettingsView: View {
                   }
                   // MARK: - SECTION 2
                   
+                  GroupBox(
+                    label: SettingsLabelView(labelText: "Customization", labelImage: "paintbrush")
+                  ) {
+                      Divider().padding(.vertical, 4)
+                      
+                      Text("If you wish, you can restart the application by toggle the switch in this box. That way it starts the onboarding process and you will see the welcome screen again.")
+                        .padding(.vertical, 8)
+                        .frame(minHeight: 60)
+                        .layoutPriority(1)
+                      /*
+                       Our goal with these modifiers to display the whole text because sometimes, especially the long text
+                       content is truncated by the rendering system.
+                       Since every view got initial zero layout priority, therefore the rendering system must figure out their
+                       sizes and it could be confused in some cases.
+                       Basically, with this layout priority, we have just told explicitly that this text view with this content
+                       is our highest priority and we don't want to truncate the text, so give it as much space as it needs.
+                       */
+                        .font(.footnote)
+                        .multilineTextAlignment(.leading)
+                  }
+                  
                   // MARK: - SECTION 3
                   GroupBox(
                     label: SettingsLabelView(labelText: "Application", labelImage: "apps.iphone")
