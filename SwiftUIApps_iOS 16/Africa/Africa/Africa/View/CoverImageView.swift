@@ -19,7 +19,12 @@ struct CoverImageView: View {
             ForEach(coverImages) { item in
                 Image(item.name)
                     .resizable()
-                .scaledToFit()
+                .scaledToFill()
+                /*
+                 We need to exchange the scale to fit, modifier to scale, to fill modifier.
+                 By the way, this is the right method to make the image to touch the horizontal edges
+                 when we are using a fixed height frame.
+                 */
             } //: LOOP
         }//: TAB
         .tabViewStyle(PageTabViewStyle())
