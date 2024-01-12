@@ -37,8 +37,24 @@ struct AnimalDetailView: View {
                     )
                 
                 // HEADLINE
+                Text(animal.headline)
+                    .font(.headline)
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(.accentColor)
+                    .padding(.horizontal)
                 
                 // GALLERY
+                /*
+                 As you can notice, we put this new heading view inside a new group.
+                 The reasoning behind it is that there is a limitation of how many views we can use together in a swiftUI file.
+                 We can avoid this limitation using Groups.
+                 */
+                Group {
+                   HeadingView(headingImage: "photo.on.rectangle.angled", headingText: "Wilderness in Pictures")
+                    
+                    InsetGalleryView(animal: animal)
+                }
+                .padding(.horizontal)
                 
                 // FACTS
                 
