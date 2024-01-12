@@ -31,6 +31,7 @@
 		8ADF61112B50275A00D95D1D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF61102B50275A00D95D1D /* MainView.swift */; };
 		8ADF61152B5138E800D95D1D /* CoverImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF61142B5138E800D95D1D /* CoverImageView.swift */; };
 		8ADF61182B513FCF00D95D1D /* CoverImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF61172B513FCF00D95D1D /* CoverImageModel.swift */; };
+		8ADF611B2B514FAD00D95D1D /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF611A2B514FAD00D95D1D /* CodableBundleExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		8ADF61102B50275A00D95D1D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		8ADF61142B5138E800D95D1D /* CoverImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageView.swift; sourceTree = "<group>"; };
 		8ADF61172B513FCF00D95D1D /* CoverImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageModel.swift; sourceTree = "<group>"; };
+		8ADF611A2B514FAD00D95D1D /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		8A1AC22B2B3D44A70084F89F /* Africa */ = {
 			isa = PBXGroup;
 			children = (
+				8ADF61192B514F8800D95D1D /* Extension */,
 				8ADF61162B513FB600D95D1D /* Model */,
 				8ADF61132B5138D600D95D1D /* View */,
 				8ADF61072B50246D00D95D1D /* Info.plist */,
@@ -167,6 +170,14 @@
 				8ADF61172B513FCF00D95D1D /* CoverImageModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8ADF61192B514F8800D95D1D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8ADF611A2B514FAD00D95D1D /* CodableBundleExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 				8A1AC22D2B3D44A70084F89F /* AfricaApp.swift in Sources */,
 				8ADF610B2B50273800D95D1D /* VideoListView.swift in Sources */,
 				8ADF610F2B50274D00D95D1D /* GalleryView.swift in Sources */,
+				8ADF611B2B514FAD00D95D1D /* CodableBundleExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
