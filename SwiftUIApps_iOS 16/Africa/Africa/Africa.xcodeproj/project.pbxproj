@@ -143,7 +143,6 @@
 		8A7D35852B51A6D000DCE448 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				8A7D35772B51785D00DCE448 /* InsetGalleryView.swift */,
 				8A7D35862B51A6DC00DCE448 /* VideoPlayerHelper.swift */,
 			);
 			path = Helper;
@@ -193,6 +192,7 @@
 		8ADF61132B5138D600D95D1D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8A7D35772B51785D00DCE448 /* InsetGalleryView.swift */,
 				8ADF61142B5138E800D95D1D /* CoverImageView.swift */,
 				8A7D356D2B515D7900DCE448 /* AnimalListItemView.swift */,
 				8A7D35732B5170DF00DCE448 /* AnimalDetailView.swift */,

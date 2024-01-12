@@ -18,6 +18,10 @@ struct VideoPlayerView: View {
 
   var body: some View {
     VStack {
+        /*
+         The video player in Swift UI comes with the default multimedia tools, such
+         as a play button, a pause button, a built in slider.
+         */
       VideoPlayer(player: playVideo(fileName: videoSelected, fileFormat: "mp4")) {
          // Text(videoTitle)
       }
