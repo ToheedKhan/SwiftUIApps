@@ -78,8 +78,22 @@ struct MotionAnimationView: View {
                         })
                 } //: LOOP
                 
-                Text("Width: \(Int(geometry.size.width)) Height: \(Int(geometry.size.height))")
+//                Text("Width: \(Int(geometry.size.width)) Height: \(Int(geometry.size.height))")
             } //: ZSTACK
+            .drawingGroup()
+            /*
+             Running such a complex animation with tons of moving and scaling elements could be power consuming.
+             There is a special modifier that can cope with this delicate scenario.
+             Drawing group.
+             As you may know, Swift UI uses core animation for its rendering by default, which offers great performance
+             out of the box.
+             With the drawing loop modifier, this complex rendering won't be slowed down because this tells Swift
+             UI that it should render the contents of the view into sequential still images which are significantly
+             faster than real time rendering.
+             Behind the scenes, this operation is powered by metal.
+             That is Apple's high level framework for working directly with the GPU.
+             And with this tiny addition, this motion effect will not suffer any performance reduction.
+             */
         } //: GEOMETRY
     }
 }

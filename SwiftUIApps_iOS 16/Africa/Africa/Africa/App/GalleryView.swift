@@ -13,9 +13,12 @@ struct GalleryView: View {
     //MARK: - BODY
 
     var body: some View {
-        NavigationView {
-            
-        } //: NAVIGATION
+        ScrollView(.vertical, showsIndicators: false) {
+            Text("Gallery")
+        } //: SCROLLVIEW
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        //background motion Animation View.
+        .background(MotionAnimationView)
     }
 }
 
