@@ -34,7 +34,10 @@ struct MapView: View {
          */
         Map(coordinateRegion: $region, annotationItems: locations, annotationContent: { item in
             // (A) PIN: OLD STYLE (always static)
-            MapPin(coordinate: item.location, tint: .accentColor)
+//            MapPin(coordinate: item.location, tint: .accentColor)
+            
+            // (B) MARKER: NEW STYLE (always static)
+            MapMarker(coordinate: item.location, tint: .accentColor)
         }) //: MAP
     }
 }
