@@ -20,7 +20,11 @@ struct GalleryView: View {
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            Text("Gallery")
+            LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10) {
+                ForEach(0 ..< 12) { item in
+                    Text("Gallery")
+                }
+            } //: GRID
         } //: SCROLLVIEW
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         //background motion Animation View.
