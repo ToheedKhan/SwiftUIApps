@@ -10,6 +10,12 @@ import SwiftUI
 struct GalleryView: View {
     //MARK: - PROPERTIES
     
+    // SIMPLE GRID DEFINITION - 3 Column Layout
+     let gridLayout: [GridItem] = [
+       GridItem(.flexible()),
+       GridItem(.flexible()),
+       GridItem(.flexible())
+     ]
     //MARK: - BODY
 
     var body: some View {
