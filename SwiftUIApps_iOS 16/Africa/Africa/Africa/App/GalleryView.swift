@@ -18,7 +18,7 @@ struct GalleryView: View {
         } //: SCROLLVIEW
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         //background motion Animation View.
-        .background(MotionAnimationView)
+        .background(MotionAnimationView())
     }
 }
 

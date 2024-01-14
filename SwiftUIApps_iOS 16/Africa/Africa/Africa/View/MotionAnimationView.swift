@@ -56,7 +56,7 @@ struct MotionAnimationView: View {
                         .foregroundColor(.gray)
                         .opacity(0.15)
                         .frame(width: 256, height: 256, alignment: .center)
-                        .scaleEffect(randomScale())
+                        .scaleEffect(isAnimating ? randomScale() : 1)
                     //to make it center, no matter which device we are using.
 //                        .position(
 //                            x: geometry.size.width / 2,
