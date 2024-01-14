@@ -25,6 +25,7 @@
 		8A7D35872B51A6DC00DCE448 /* VideoPlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D35862B51A6DC00DCE448 /* VideoPlayerHelper.swift */; };
 		8A7D35892B538BC900DCE448 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D35882B538BC900DCE448 /* LocationModel.swift */; };
 		8A7D358B2B53924600DCE448 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D358A2B53924600DCE448 /* MapAnnotationView.swift */; };
+		8A7D358D2B53BA0500DCE448 /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D358C2B53BA0500DCE448 /* MotionAnimationView.swift */; };
 		8ADF60F42B501E5B00D95D1D /* gorilla.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8ADF60EA2B501E5900D95D1D /* gorilla.mp4 */; };
 		8ADF60F52B501E5B00D95D1D /* elephant.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8ADF60EB2B501E5900D95D1D /* elephant.mp4 */; };
 		8ADF60F62B501E5B00D95D1D /* cheetah.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8ADF60EC2B501E5900D95D1D /* cheetah.mp4 */; };
@@ -68,6 +69,7 @@
 		8A7D35862B51A6DC00DCE448 /* VideoPlayerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerHelper.swift; sourceTree = "<group>"; };
 		8A7D35882B538BC900DCE448 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		8A7D358A2B53924600DCE448 /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
+		8A7D358C2B53BA0500DCE448 /* MotionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationView.swift; sourceTree = "<group>"; };
 		8ADF60EA2B501E5900D95D1D /* gorilla.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gorilla.mp4; sourceTree = "<group>"; };
 		8ADF60EB2B501E5900D95D1D /* elephant.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = elephant.mp4; sourceTree = "<group>"; };
 		8ADF60EC2B501E5900D95D1D /* cheetah.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cheetah.mp4; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				8A7D35812B51A46A00DCE448 /* VideoPlayerView.swift */,
 				8A7D35832B51A47900DCE448 /* VideoListItemView.swift */,
 				8A7D358A2B53924600DCE448 /* MapAnnotationView.swift */,
+				8A7D358C2B53BA0500DCE448 /* MotionAnimationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				8A7D35842B51A47900DCE448 /* VideoListItemView.swift in Sources */,
 				8ADF610F2B50274D00D95D1D /* GalleryView.swift in Sources */,
 				8A7D35782B51785D00DCE448 /* InsetGalleryView.swift in Sources */,
+				8A7D358D2B53BA0500DCE448 /* MotionAnimationView.swift in Sources */,
 				8ADF611B2B514FAD00D95D1D /* CodableBundleExtension.swift in Sources */,
 				8A7D35762B51760C00DCE448 /* HeadingView.swift in Sources */,
 			);
