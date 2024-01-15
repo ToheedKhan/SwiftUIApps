@@ -15,6 +15,7 @@
 		8AE0F6DA2B556A2700007B48 /* player.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0F6D62B556A2700007B48 /* player.json */; };
 		8AE0F6DB2B556A2700007B48 /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0F6D72B556A2700007B48 /* category.json */; };
 		8AE0F6DC2B556A2700007B48 /* product.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0F6D82B556A2700007B48 /* product.json */; };
+		8AE0F6E62B556C2100007B48 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0F6E52B556C2100007B48 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8AE0F6D72B556A2700007B48 /* category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
 		8AE0F6D82B556A2700007B48 /* product.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = product.json; sourceTree = "<group>"; };
 		8AE0F6DD2B556AC400007B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8AE0F6E52B556C2100007B48 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +62,13 @@
 		8AE0F6C52B55692C00007B48 /* TouchDown */ = {
 			isa = PBXGroup;
 			children = (
-				8AE0F6DD2B556AC400007B48 /* Info.plist */,
+				8AE0F6DE2B556B8300007B48 /* App */,
 				8AE0F6D42B556A2700007B48 /* Data */,
-				8AE0F6C62B55692C00007B48 /* TouchDownApp.swift */,
-				8AE0F6C82B55692C00007B48 /* ContentView.swift */,
+				8AE0F6E32B556BCD00007B48 /* Extension */,
+				8AE0F6DF2B556B9400007B48 /* Model */,
+				8AE0F6E42B556BD800007B48 /* Utility */,
+				8AE0F6E02B556B9F00007B48 /* View */,
+				8AE0F6DD2B556AC400007B48 /* Info.plist */,
 				8AE0F6CA2B55692D00007B48 /* Assets.xcassets */,
 				8AE0F6CC2B55692D00007B48 /* Preview Content */,
 			);
@@ -87,6 +92,60 @@
 				8AE0F6D82B556A2700007B48 /* product.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		8AE0F6DE2B556B8300007B48 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8AE0F6C62B55692C00007B48 /* TouchDownApp.swift */,
+				8AE0F6C82B55692C00007B48 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8AE0F6DF2B556B9400007B48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8AE0F6E02B556B9F00007B48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8AE0F6E22B556BBF00007B48 /* Detail */,
+				8AE0F6E12B556BB300007B48 /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8AE0F6E12B556BB300007B48 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8AE0F6E22B556BBF00007B48 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		8AE0F6E32B556BCD00007B48 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8AE0F6E42B556BD800007B48 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				8AE0F6E52B556C2100007B48 /* Constant.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +224,7 @@
 			files = (
 				8AE0F6C92B55692C00007B48 /* ContentView.swift in Sources */,
 				8AE0F6C72B55692C00007B48 /* TouchDownApp.swift in Sources */,
+				8AE0F6E62B556C2100007B48 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
