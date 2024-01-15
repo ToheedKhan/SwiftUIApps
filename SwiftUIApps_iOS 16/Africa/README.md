@@ -45,6 +45,24 @@ New programming concepts and more new SwiftUI features covered in this app are l
 
 
 
+## Important
+
+**Launch Screen**
+The new launch screen settings available for us from iOS 14.
+We can create launch screen using info plist property. To create a new launch screen without touching the old storyboard technology.
+
+**Dark Appearance**
+Handful of official Apple iOS application that works only in dark mode?
+Ex- Stock app, Apple Watch app, Measure app,Compass app and camera app etc
+
+### Haptics
+**UIImpactFeedbackGenerator**
+Haptics are designed to enhance the user experience with your iPhone by implementing a sense of touch as you interact with your phone.
+In other words, some of your actions on your iPhone will trigger a haptic, so-called a tactile feedback (often through vibrations, force, or motion, to create a sense of touch in interactions).
+
+
+
+
 
 
 
