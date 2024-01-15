@@ -11,6 +11,7 @@
 		8A1AC22F2B3D44A70084F89F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1AC22E2B3D44A70084F89F /* ContentView.swift */; };
 		8A1AC2312B3D44A80084F89F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1AC2302B3D44A80084F89F /* Assets.xcassets */; };
 		8A1AC2342B3D44A80084F89F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1AC2332B3D44A80084F89F /* Preview Assets.xcassets */; };
+		8A37DC302B553988007FC124 /* AnimalGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A37DC2F2B553988007FC124 /* AnimalGridItemView.swift */; };
 		8A7D356E2B515D7900DCE448 /* AnimalListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D356D2B515D7900DCE448 /* AnimalListItemView.swift */; };
 		8A7D35702B51639C00DCE448 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D356F2B51639C00DCE448 /* AnimalModel.swift */; };
 		8A7D35742B5170DF00DCE448 /* AnimalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D35732B5170DF00DCE448 /* AnimalDetailView.swift */; };
@@ -55,6 +56,7 @@
 		8A1AC22E2B3D44A70084F89F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8A1AC2302B3D44A80084F89F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A1AC2332B3D44A80084F89F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8A37DC2F2B553988007FC124 /* AnimalGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGridItemView.swift; sourceTree = "<group>"; };
 		8A7D356D2B515D7900DCE448 /* AnimalListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListItemView.swift; sourceTree = "<group>"; };
 		8A7D356F2B51639C00DCE448 /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
 		8A7D35732B5170DF00DCE448 /* AnimalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailView.swift; sourceTree = "<group>"; };
@@ -198,18 +200,19 @@
 		8ADF61132B5138D600D95D1D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8A7D35772B51785D00DCE448 /* InsetGalleryView.swift */,
-				8ADF61142B5138E800D95D1D /* CoverImageView.swift */,
-				8A7D356D2B515D7900DCE448 /* AnimalListItemView.swift */,
 				8A7D35732B5170DF00DCE448 /* AnimalDetailView.swift */,
+				8A37DC2F2B553988007FC124 /* AnimalGridItemView.swift */,
+				8A7D356D2B515D7900DCE448 /* AnimalListItemView.swift */,
+				8ADF61142B5138E800D95D1D /* CoverImageView.swift */,
+				8A7D357D2B51A1ED00DCE448 /* ExternalWeblinkView.swift */,
 				8A7D35752B51760C00DCE448 /* HeadingView.swift */,
+				8A7D35772B51785D00DCE448 /* InsetGalleryView.swift */,
 				8A7D35792B51989C00DCE448 /* InsetFactView.swift */,
 				8A7D357B2B519AB000DCE448 /* InsetMapView.swift */,
-				8A7D357D2B51A1ED00DCE448 /* ExternalWeblinkView.swift */,
-				8A7D35812B51A46A00DCE448 /* VideoPlayerView.swift */,
-				8A7D35832B51A47900DCE448 /* VideoListItemView.swift */,
 				8A7D358A2B53924600DCE448 /* MapAnnotationView.swift */,
 				8A7D358C2B53BA0500DCE448 /* MotionAnimationView.swift */,
+				8A7D35812B51A46A00DCE448 /* VideoPlayerView.swift */,
+				8A7D35832B51A47900DCE448 /* VideoListItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				8ADF610B2B50273800D95D1D /* VideoListView.swift in Sources */,
 				8A7D35802B51A43300DCE448 /* VideoModel.swift in Sources */,
 				8A7D35892B538BC900DCE448 /* LocationModel.swift in Sources */,
+				8A37DC302B553988007FC124 /* AnimalGridItemView.swift in Sources */,
 				8A7D35842B51A47900DCE448 /* VideoListItemView.swift in Sources */,
 				8ADF610F2B50274D00D95D1D /* GalleryView.swift in Sources */,
 				8A7D35782B51785D00DCE448 /* InsetGalleryView.swift in Sources */,

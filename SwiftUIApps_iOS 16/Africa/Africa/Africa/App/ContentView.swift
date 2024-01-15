@@ -58,7 +58,17 @@ struct ContentView: View {
                         } //: LOOP
                     } //: LIST
                 } else {
-                    Text("GridView is active")
+                    ScrollView(.vertical, showsIndicators: false) {
+                      LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10) {
+                        ForEach(animals) { animal in
+                          NavigationLink(destination: AnimalDetailView(animal: animal)) {
+                            AnimalGridItemView(animal: animal)
+                          } //: LINK
+                        } //: LOOP
+                      } //: GRID
+                      .padding(10)
+                      .animation(.easeIn)
+                    } //: SCROLL
                 } //: CONDITION
             } //: GROUP
             /* navigation bar and the toolbar to be shared between the list and the grid views.*/
