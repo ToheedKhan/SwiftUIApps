@@ -82,7 +82,13 @@ struct ContentView: View {
                         } //: LOOP
                       } //: GRID
                       .padding(10)
-                      .animation(.easeIn)
+                        /*
+                         https://developer.apple.com/forums/thread/688947
+                         
+                         You need tell Xcode what exactly should be animated! With given a variable that conform to Equatable protocol. That could be State or Binding or any other wrapper that allow you to update the value of it.
+                         */
+                      .animation(.easeIn, value: UUID())
+//                      .animation(.easeIn)
                     } //: SCROLL
                 } //: CONDITION
             } //: GROUP

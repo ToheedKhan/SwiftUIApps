@@ -81,7 +81,7 @@ struct GalleryView: View {
                           }
                     }
                 } //: GRID
-                .animation(.easeIn)
+//                .animation(.easeIn)
                 .onAppear(perform: {
                   gridSwitch()
                 })
