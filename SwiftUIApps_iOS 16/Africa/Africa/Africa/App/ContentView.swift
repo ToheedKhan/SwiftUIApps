@@ -17,11 +17,19 @@ struct ContentView: View {
     
     @State private var toolbarIcon: String = "square.grid.2x2"
     
+    //    @State private var gridLayout: [GridItem] = Array(repeating: GridItem(.flexible()), count: 2)
+
+    // For 1 Column to 3 Column
     @State private var gridLayout: [GridItem] = [ GridItem(.flexible()) ]
+    //property to keep track of the number of the next grid
     @State private var gridColumn: Int = 1
     
     //: MARK - FUNCTIONS
-    
+    /*
+     // For 1 Column to 3 Column
+
+      call each time when a user taps on the grid button.
+     */
     func gridSwitch() {
       gridLayout = Array(repeating: .init(.flexible()), count: gridLayout.count % 3 + 1)
       gridColumn = gridLayout.count
@@ -94,6 +102,8 @@ struct ContentView: View {
                     haptics.impactOccurred()
                     gridSwitch()
                   }) {
+                      
+//                    Image(systemName: "square.grid.2x2")
                     Image(systemName: toolbarIcon)
                       .font(.title2)
                       .foregroundColor(isGridViewActive ? .accentColor : .primary)
