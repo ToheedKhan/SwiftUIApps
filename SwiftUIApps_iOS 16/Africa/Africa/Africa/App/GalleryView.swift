@@ -24,7 +24,20 @@ struct GalleryView: View {
 //     ]
     
     // EFFICIENT GRID DEFINITION
-     let gridLayout: [GridItem] = Array(repeating: GridItem(.flexible()), count: 3)
+//     let gridLayout: [GridItem] = Array(repeating: GridItem(.flexible()), count: 3)
+    
+    // DYNAMIC GRID LAYOUT (Using slider UI)
+    
+    @State private var gridLayout: [GridItem] = [GridItem(.flexible())]
+    @State private var gridColumn: Double = 3.0
+    /*
+     function that will call
+     when we move the thumb to the left or to the right on that track.
+     */
+    
+    func gridSwitch() {
+      gridLayout = Array(repeating: .init(.flexible()), count: Int(gridColumn))
+    }
     
     //MARK: - BODY
 
@@ -38,7 +51,19 @@ struct GalleryView: View {
                   .scaledToFit()
                   .clipShape(Circle())
                   .overlay(Circle().stroke(Color.white, lineWidth: 8))
-            
+                // MARK: - SLIDER
+                /*Add a new slider between the selected animal image and the grid to modify the
+                 number of columns with this slider user interface.*/
+                
+                /*Our goal is to provide functionality that will allow the user to switch from two columns up to four.*/
+                
+                Slider(value: $gridColumn, in: 2...4, step: 1)
+                  .padding(.horizontal)
+                  .onChange(of: gridColumn, perform: { value in
+                    gridSwitch()
+                  })
+                
+                
                 LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10) {
                     ForEach(animals) { item in
                         // MARK: - IMAGE
@@ -53,6 +78,10 @@ struct GalleryView: View {
                           }
                     }
                 } //: GRID
+                
+                .onAppear(perform: {
+                  gridSwitch()
+                })
             } //: VSTACK
             .padding(.horizontal, 10)
             .padding(.vertical, 50)
