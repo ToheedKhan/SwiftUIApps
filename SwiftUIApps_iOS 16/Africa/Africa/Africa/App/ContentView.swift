@@ -11,6 +11,8 @@ struct ContentView: View {
     //MARK: - PROPERTIES
     let animals: [Animal] = Bundle.main.decode("animals.json")
     
+    let haptics = UIImpactFeedbackGenerator(style: .medium)
+    
     @State private var isGridViewActive: Bool = false
     
     @State private var toolbarIcon: String = "square.grid.2x2"
@@ -42,17 +44,24 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                CoverImageView().frame(height: 300)
-                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                ForEach(animals) {
-                    animal in
-                    NavigationLink(destination: AnimalDetailView(animal: animal)) {
-                        AnimalListItemView(animal: animal)
-                    } //: LINK
-                    
-                }
-            } //: LIST
+            Group {
+                if !isGridViewActive {
+                    List {
+                        CoverImageView().frame(height: 300)
+                            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        ForEach(animals) {
+                            animal in
+                            NavigationLink(destination: AnimalDetailView(animal: animal)) {
+                                AnimalListItemView(animal: animal)
+                            } //: LINK
+                            
+                        } //: LOOP
+                    } //: LIST
+                } else {
+                    Text("GridView is active")
+                } //: CONDITION
+            } //: GROUP
+            /* navigation bar and the toolbar to be shared between the list and the grid views.*/
             .navigationBarTitle("Africa", displayMode: .large)
             .toolbar {
               ToolbarItem(placement: .navigationBarTrailing) {
@@ -61,6 +70,7 @@ struct ContentView: View {
                   Button(action: {
                     print("List view is activated")
                     isGridViewActive = false
+                    haptics.impactOccurred()
                   }) {
                     Image(systemName: "square.fill.text.grid.1x2")
                       .font(.title2)
@@ -71,6 +81,7 @@ struct ContentView: View {
                   Button(action: {
                     print("Grid view is activated")
                     isGridViewActive = true
+                    haptics.impactOccurred()
                     gridSwitch()
                   }) {
                     Image(systemName: toolbarIcon)
