@@ -14,6 +14,7 @@
 		8A37DC302B553988007FC124 /* AnimalGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A37DC2F2B553988007FC124 /* AnimalGridItemView.swift */; };
 		8A6E8C612B554D8C00D2B6DB /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6E8C602B554D8C00D2B6DB /* Stickers.xcassets */; };
 		8A6E8C652B554D8C00D2B6DB /* Stickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8A6E8C5E2B554D8B00D2B6DB /* Stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8A6E8C6B2B5550FB00D2B6DB /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E8C6A2B5550FB00D2B6DB /* CreditsView.swift */; };
 		8A7D356E2B515D7900DCE448 /* AnimalListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D356D2B515D7900DCE448 /* AnimalListItemView.swift */; };
 		8A7D35702B51639C00DCE448 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D356F2B51639C00DCE448 /* AnimalModel.swift */; };
 		8A7D35742B5170DF00DCE448 /* AnimalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D35732B5170DF00DCE448 /* AnimalDetailView.swift */; };
@@ -86,6 +87,7 @@
 		8A6E8C5E2B554D8B00D2B6DB /* Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A6E8C602B554D8C00D2B6DB /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		8A6E8C622B554D8C00D2B6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A6E8C6A2B5550FB00D2B6DB /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		8A7D356D2B515D7900DCE448 /* AnimalListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListItemView.swift; sourceTree = "<group>"; };
 		8A7D356F2B51639C00DCE448 /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
 		8A7D35732B5170DF00DCE448 /* AnimalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailView.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				8A7D358C2B53BA0500DCE448 /* MotionAnimationView.swift */,
 				8A7D35812B51A46A00DCE448 /* VideoPlayerView.swift */,
 				8A7D35832B51A47900DCE448 /* VideoListItemView.swift */,
+				8A6E8C6A2B5550FB00D2B6DB /* CreditsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				8A37DC302B553988007FC124 /* AnimalGridItemView.swift in Sources */,
 				8A7D35842B51A47900DCE448 /* VideoListItemView.swift in Sources */,
 				8ADF610F2B50274D00D95D1D /* GalleryView.swift in Sources */,
+				8A6E8C6B2B5550FB00D2B6DB /* CreditsView.swift in Sources */,
 				8A7D35782B51785D00DCE448 /* InsetGalleryView.swift in Sources */,
 				8A7D358D2B53BA0500DCE448 /* MotionAnimationView.swift in Sources */,
 				8ADF611B2B514FAD00D95D1D /* CodableBundleExtension.swift in Sources */,

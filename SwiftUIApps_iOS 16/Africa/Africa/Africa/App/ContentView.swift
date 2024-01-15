@@ -64,6 +64,13 @@ struct ContentView: View {
                             } //: LINK
                             
                         } //: LOOP
+                        /*But for some strange reason CreditView aligned to left, and that's not exactly what we want at all.
+                         You should keep in mind that the list view in Swift UI comes with some default preferences.
+                         Many times this could work perfectly as we intended, but sometimes it does the opposite things.
+                         There is no dedicated list cell modifier for the alignment in swiftUI List row yet.
+                         To fix this, we can put this credits view into a horizontal stack container as a wrapper*/
+                        CreditsView()
+                            .modifier(CenterModifier())
                     } //: LIST
                 } else {
                     ScrollView(.vertical, showsIndicators: false) {
