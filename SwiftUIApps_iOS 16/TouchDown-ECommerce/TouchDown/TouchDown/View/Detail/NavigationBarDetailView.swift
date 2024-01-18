@@ -17,8 +17,9 @@ struct NavigationBarDetailView: View {
         HStack {
             Button(action: {
                 withAnimation(.easeIn) {
-                  shop.selectedProduct = nil
-                  shop.showingProduct = false
+                    feedback.impactOccurred()
+                    shop.selectedProduct = nil
+                    shop.showingProduct = false
                 }
             }, label: {
                 Image(systemName: "chevron.left")
