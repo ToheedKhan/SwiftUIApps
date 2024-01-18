@@ -19,6 +19,7 @@
 		8A146FE22B592CF300E5FFE8 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A146FE12B592CF300E5FFE8 /* SectionView.swift */; };
 		8A146FE42B592F7B00E5FFE8 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A146FE32B592F7B00E5FFE8 /* TitleView.swift */; };
 		8A146FE62B59323900E5FFE8 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A146FE52B59323900E5FFE8 /* ProductModel.swift */; };
+		8A146FEA2B59387E00E5FFE8 /* ProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A146FE92B59387E00E5FFE8 /* ProductItemView.swift */; };
 		8AE0F6C72B55692C00007B48 /* TouchDownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0F6C62B55692C00007B48 /* TouchDownApp.swift */; };
 		8AE0F6C92B55692C00007B48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0F6C82B55692C00007B48 /* ContentView.swift */; };
 		8AE0F6CB2B55692D00007B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE0F6CA2B55692D00007B48 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		8A146FE12B592CF300E5FFE8 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		8A146FE32B592F7B00E5FFE8 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		8A146FE52B59323900E5FFE8 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		8A146FE92B59387E00E5FFE8 /* ProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemView.swift; sourceTree = "<group>"; };
 		8AE0F6C32B55692C00007B48 /* TouchDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE0F6C62B55692C00007B48 /* TouchDownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchDownApp.swift; sourceTree = "<group>"; };
 		8AE0F6C82B55692C00007B48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				8A146FDD2B592B9900E5FFE8 /* CategoryGridView.swift */,
 				8A146FE12B592CF300E5FFE8 /* SectionView.swift */,
 				8A146FE32B592F7B00E5FFE8 /* TitleView.swift */,
+				8A146FE92B59387E00E5FFE8 /* ProductItemView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				8A146FD02B58F1AD00E5FFE8 /* LogoView.swift in Sources */,
 				8AE0F6E82B556DE100007B48 /* FooterView.swift in Sources */,
 				8AE0F6C72B55692C00007B48 /* TouchDownApp.swift in Sources */,
+				8A146FEA2B59387E00E5FFE8 /* ProductItemView.swift in Sources */,
 				8AE0F6E62B556C2100007B48 /* Constant.swift in Sources */,
 				8A146FD62B59218F00E5FFE8 /* FeaturedTabView.swift in Sources */,
 				8A146FDE2B592B9900E5FFE8 /* CategoryGridView.swift in Sources */,
