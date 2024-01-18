@@ -32,7 +32,14 @@ let colorBackground: Color = Color("ColorBackground")
 let colorGray: Color = Color(UIColor.systemGray4)
 
 // LAYOUT
-
+let columnSpacing: CGFloat = 10
+let rowSpacing: CGFloat = 10
+/*
+ This grid layout will help us creating any two column vertical or any two row horizontal containers.
+ */
+var gridLayout: [GridItem] {
+  return Array(repeating: GridItem(.flexible(), spacing: rowSpacing), count: 2)
+}
 
 
 // UX
