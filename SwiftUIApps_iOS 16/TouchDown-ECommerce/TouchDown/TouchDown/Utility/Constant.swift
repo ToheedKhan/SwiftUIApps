@@ -23,6 +23,7 @@ any real project.
 
 // DATA
 let players: [Player] = Bundle.main.decode("player.json")
+let categories: [Category] = Bundle.main.decode("category.json")
 
 
 // COLOR
