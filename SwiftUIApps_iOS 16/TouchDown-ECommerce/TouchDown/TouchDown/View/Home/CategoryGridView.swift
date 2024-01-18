@@ -20,8 +20,13 @@ struct CategoryGridView: View {
            Since lazy edge grid are pushed out views vertically, therefore a vertical alignment or some fixed size constraints is useful.
            */
         LazyHGrid(rows: gridLayout, alignment: .center, spacing: columnSpacing, pinnedViews: [], content: {
-            ForEach(categories) { category in
-              CategoryItemView(category: category)
+            Section(
+              header: SectionView(rotateClockwise: false),
+              footer: SectionView(rotateClockwise: true)
+            ) {
+              ForEach(categories) { category in
+                CategoryItemView(category: category)
+              }
             }
         }) //: GRID
         .frame(height: 140)
