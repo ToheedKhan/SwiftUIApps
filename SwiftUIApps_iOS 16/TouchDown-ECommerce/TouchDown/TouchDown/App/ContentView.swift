@@ -10,15 +10,23 @@ import SwiftUI
 struct ContentView: View {
     // MARK: - PROPERTY
     
+    // MARK: - FUNCTIONS
+
+    private func getWindowScene() -> UIWindowScene? {
+        return UIApplication.shared.connectedScenes.first as? UIWindowScene
+    }
     
     // MARK: - BODY
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
               NavigationBarView()
-                .padding()
-                .background(Color.white)
-                .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 5)
+                    .padding(.horizontal, 15)
+                    .padding(.bottom)
+//                    .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
+                    .padding(.top, getWindowScene()?.windows.first?.safeAreaInsets.top)
+                    .background(Color.white)
+                    .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 5)
                 
               Spacer()
                 
