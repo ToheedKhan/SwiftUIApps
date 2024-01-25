@@ -10,7 +10,10 @@ import SwiftUI
 @main
 struct DevoteApp: App {
     let persistenceController = PersistenceController.shared
-
+/*
+ This managed object context key in the environment is designed to store our active core data managed object context.
+ In a nutshell, with that single line of code, the managed object context is injected for the core data container in the whole swift UI app hierarchy and its all child views.
+ */
     var body: some Scene {
         WindowGroup {
             ContentView()
