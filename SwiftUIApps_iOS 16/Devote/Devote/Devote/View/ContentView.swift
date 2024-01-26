@@ -31,6 +31,10 @@ struct ContentView: View {
     // MARK: - PROPERTY
     @State var task: String = ""
     
+    private var isButtonDisabled: Bool {
+        task.isEmpty
+    }
+    
     // FETCHING DATA
     @Environment(\.managedObjectContext) private var viewContext
     
@@ -88,12 +92,15 @@ struct ContentView: View {
                         .cornerRadius(10)
                     
                     Button(action:  {
+                        print(isButtonDisabled)
+
                         addItem()
                     }, label: {
                         Spacer()
                         Text("SAVE")
                         Spacer()
                     })
+                    .disabled(isButtonDisabled)
                     .padding()
                     .font(.headline)
                     .foregroundColor(.white)
