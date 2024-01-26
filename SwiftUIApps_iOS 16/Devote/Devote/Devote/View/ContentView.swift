@@ -84,48 +84,60 @@ struct ContentView: View {
     // MARK: - BODY
     var body: some View {
         NavigationView {
-            VStack {
-                VStack(spacing: 16) {
-                    TextField("New task", text: $task)
+            ZStack {
+                VStack {
+                    VStack(spacing: 16) {
+                        TextField("New task", text: $task)
+                            .padding()
+                            .background(
+                                Color(UIColor.systemGray6)
+                            )
+                            .cornerRadius(10)
+                        
+                        Button(action:  {
+                            print(isButtonDisabled)
+                            
+                            addItem()
+                        }, label: {
+                            Spacer()
+                            Text("SAVE")
+                            Spacer()
+                        })
+                        .disabled(isButtonDisabled)
                         .padding()
-                        .background(
-                            Color(UIColor.systemGray6)
-                        )
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .background(isButtonDisabled ? Color.gray : Color.pink)
                         .cornerRadius(10)
-                    
-                    Button(action:  {
-                        print(isButtonDisabled)
-
-                        addItem()
-                    }, label: {
-                        Spacer()
-                        Text("SAVE")
-                        Spacer()
-                    })
-                    .disabled(isButtonDisabled)
+                    } //: VSTACK
                     .padding()
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .background(isButtonDisabled ? Color.gray : Color.pink)
-                    .cornerRadius(10)
+                    List {
+                        ForEach(items) { item in
+                            VStack(alignment: .leading) {
+                                Text(item.task ?? "")
+                                    .font(.headline)
+                                    .fontWeight(.bold)
+                                
+                                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                                    .font(.footnote)
+                                    .foregroundColor(.gray)
+                                
+                            } //: VSTACK - LIST ITEM
+                        }
+                        .onDelete(perform: deleteItems)
+                    } //: LIST
+                    .listStyle(InsetGroupedListStyle())
+                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.3), radius: 12)
+                    .padding(.vertical, 0)
+                    .frame(maxWidth: 640)
                 } //: VSTACK
-                .padding()
-                List {
-                    ForEach(items) { item in
-                        VStack(alignment: .leading) {
-                            Text(item.task ?? "")
-                                .font(.headline)
-                                .fontWeight(.bold)
-                            
-                            Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                                .font(.footnote)
-                                .foregroundColor(.gray)
-                            
-                        } //: VSTACK - LIST ITEM
-                    }
-                    .onDelete(perform: deleteItems)
-                } //: LIST
-            } //: VSTACK
+            } //: ZSTACK
+            /*
+             remove the background color from this new list.
+             */
+            .onAppear(){
+                UITableView.appearance().backgroundColor = UIColor.clear
+            }
             .navigationBarTitle("Daily Tasks", displayMode: .large)
             .toolbar {
                 //#if os(iOS)
@@ -134,7 +146,11 @@ struct ContentView: View {
                 }
                 //#endif
             } //: TOOLBAR
+            .background(
+                backgroundGradient.ignoresSafeArea(.all))
         } //: NAVIGATION
+        //we will support the iPad devices by adding a new modifier to the navigation view.
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
