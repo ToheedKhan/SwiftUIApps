@@ -126,6 +126,7 @@ struct ContentView: View {
                         }
                         .onDelete(perform: deleteItems)
                     } //: LIST
+                    .listRowBackground(Color.green)
                     .listStyle(InsetGroupedListStyle())
                     .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.3), radius: 12)
                     .padding(.vertical, 0)
@@ -136,7 +137,9 @@ struct ContentView: View {
              remove the background color from this new list.
              */
             .onAppear(){
+                UITableView.appearance().separatorStyle = .none
                 UITableView.appearance().backgroundColor = UIColor.clear
+                UITableViewCell.appearance().backgroundColor = UIColor.clear
             }
             .navigationBarTitle("Daily Tasks", displayMode: .large)
             .toolbar {
@@ -146,6 +149,7 @@ struct ContentView: View {
                 }
                 //#endif
             } //: TOOLBAR
+            .background(BackgroundImageView())
             .background(
                 backgroundGradient.ignoresSafeArea(.all))
         } //: NAVIGATION
