@@ -48,6 +48,8 @@ struct NewTaskItemView: View {
             Spacer()
             VStack(spacing: 16) {
                 TextField("New task", text: $task)
+                    .foregroundColor(.pink)
+                    .font(.system(size: 24, weight: .bold, design: .rounded))
                     .padding()
                     .background(
                         Color(UIColor.systemGray6)
@@ -61,11 +63,11 @@ struct NewTaskItemView: View {
                 }, label: {
                     Spacer()
                     Text("SAVE")
+                        .font(.system(size: 24, weight: .bold, design: .rounded))
                     Spacer()
                 })
                 .disabled(isButtonDisabled)
                 .padding()
-                .font(.headline)
                 .foregroundColor(.white)
                 .background(isButtonDisabled ? Color.blue : Color.pink)
                 .cornerRadius(10)
