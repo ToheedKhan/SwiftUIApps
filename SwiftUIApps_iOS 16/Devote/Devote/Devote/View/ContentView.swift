@@ -133,13 +133,8 @@ struct ContentView: View {
                 UITableViewCell.appearance().backgroundColor = UIColor.clear
             }
             .navigationBarTitle("Daily Tasks", displayMode: .large)
-            .toolbar {
-                //#if os(iOS)
-                ToolbarItem(placement: .navigationBarLeading) {
-                    EditButton()
-                }
-                //#endif
-            } //: TOOLBAR
+            //we can hide the navigation bar in a specific view with a dedicated modifier.
+            .navigationBarHidden(true)
             .background(BackgroundImageView())
             .background(
                 backgroundGradient.ignoresSafeArea(.all))
