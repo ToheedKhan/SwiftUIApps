@@ -6,7 +6,14 @@
 //
 
 import SwiftUI
-
+/* Preferred Color scheme - Automatic
+ For Custom component - Manual Switch
+ 
+ Using the preferred color scheme is ideal for all swift UI's built in user interface elements.
+It will switch from one mode to another one automatically.
+But when it comes to any custom design, then we have to manage it manually.
+This is why we must work on this new task item component a little bit.
+ */
 struct NewTaskItemView: View {
     // MARK: - PROPERTY
     
