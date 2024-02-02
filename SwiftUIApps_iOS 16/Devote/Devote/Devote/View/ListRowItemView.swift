@@ -37,6 +37,7 @@ struct ListRowItemView: View {
           .padding(.vertical, 12)
           .animation(.default)
       } //: TOGGLE
+      .toggleStyle(CheckboxStyle())
         ///To add the update functionality to it. First parameter is Publisher parameter, 2 is action parameter
         ///
         /*

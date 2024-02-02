@@ -14,8 +14,9 @@ struct CheckboxStyle: ToggleStyle {
         .foregroundColor(configuration.isOn ? .pink : .primary)
         .font(.system(size: 30, weight: .semibold, design: .rounded))
         .onTapGesture {
-          configuration.isOn.toggle()
-      configuration.label
+            configuration.isOn.toggle()
+        }//: TAP
+        configuration.label
     } //: HSTACK
   }
 }
