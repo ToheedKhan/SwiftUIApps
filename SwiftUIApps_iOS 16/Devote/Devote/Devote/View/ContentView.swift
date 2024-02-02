@@ -33,7 +33,7 @@ struct ContentView: View {
     @State private var showNewTaskItem: Bool = true
     //we want to store the actual appearance permanently. Default is "Light"
     @AppStorage("isDarkMode") private var isDarkMode: Bool = false
-
+    
     // FETCHING DATA
     @Environment(\.managedObjectContext) private var viewContext
     
@@ -67,36 +67,36 @@ struct ContentView: View {
             ZStack {
                 // MARK: - MAIN VIEW
                 VStack {
-                  // MARK: - HEADER
+                    // MARK: - HEADER
                     HStack(spacing: 10) {
-                      // TITLE
-                      Text("Devote")
-                        .font(.system(.largeTitle, design: .rounded))
-                        .fontWeight(.heavy)
-                        .padding(.leading, 4)
-                      
-                      Spacer()
-                      
-                      // EDIT BUTTON
-                      EditButton()
-                        .font(.system(size: 16, weight: .semibold, design: .rounded))
-                        .padding(.horizontal, 10)
-                        .frame(minWidth: 70, minHeight: 24)
-                        .background(
-                          Capsule().stroke(Color.white, lineWidth: 2)
-                        )
-                      
-                      // APPEARANCE BUTTON
-                      Button(action: {
-                        // TOGGLE APPEARANCE
-                          isDarkMode.toggle()
-                      }, label: {
-                        Image(systemName: isDarkMode ? "moon.circle.fill" :  "moon.circle")
-                          .resizable()
-                          .frame(width: 24, height: 24)
-                          .font(.system(.title, design: .rounded))
-                      })
-                      
+                        // TITLE
+                        Text("Devote")
+                            .font(.system(.largeTitle, design: .rounded))
+                            .fontWeight(.heavy)
+                            .padding(.leading, 4)
+                        
+                        Spacer()
+                        
+                        // EDIT BUTTON
+                        EditButton()
+                            .font(.system(size: 16, weight: .semibold, design: .rounded))
+                            .padding(.horizontal, 10)
+                            .frame(minWidth: 70, minHeight: 24)
+                            .background(
+                                Capsule().stroke(Color.white, lineWidth: 2)
+                            )
+                        
+                        // APPEARANCE BUTTON
+                        Button(action: {
+                            // TOGGLE APPEARANCE
+                            isDarkMode.toggle()
+                        }, label: {
+                            Image(systemName: isDarkMode ? "moon.circle.fill" :  "moon.circle")
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                                .font(.system(.title, design: .rounded))
+                        })
+                        
                     } //: HSTACK
                     .padding()
                     .foregroundColor(.white)
@@ -106,19 +106,19 @@ struct ContentView: View {
                     //MARK: - NEW TASK BUTTON
                     
                     Button(action: {
-                      showNewTaskItem = true
+                        showNewTaskItem = true
                     }, label: {
-                      Image(systemName: "plus.circle")
-                        .font(.system(size: 30, weight: .semibold, design: .rounded))
-                      Text("New Task")
-                        .font(.system(size: 24, weight: .bold, design: .rounded))
+                        Image(systemName: "plus.circle")
+                            .font(.system(size: 30, weight: .semibold, design: .rounded))
+                        Text("New Task")
+                            .font(.system(size: 24, weight: .bold, design: .rounded))
                     })
                     .foregroundColor(.white)
                     .padding(.horizontal, 20)
                     .padding(.vertical, 15)
                     .background(
-                      LinearGradient(gradient: Gradient(colors: [Color.pink, Color.blue]), startPoint: .leading, endPoint: .trailing)
-                        .clipShape(Capsule())
+                        LinearGradient(gradient: Gradient(colors: [Color.pink, Color.blue]), startPoint: .leading, endPoint: .trailing)
+                            .clipShape(Capsule())
                     )
                     .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.25), radius: 8, x: 0.0, y: 4.0)
                     
@@ -126,17 +126,7 @@ struct ContentView: View {
                     
                     List {
                         ForEach(items) { item in
-                            VStack(alignment: .leading) {
-                                Text(item.task ?? "")
-                                    .font(.headline)
-                                    .fontWeight(.bold)
-                                
-                                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                                    .font(.footnote)
-                                    .foregroundColor(.gray)
-                                
-                            } //: VSTACK - LIST ITEM
-                        }
+                            ListRowItemView(item: item)                        }
                         .onDelete(perform: deleteItems)
                     } //: LIST
                     .listRowBackground(Color.green)
@@ -149,14 +139,14 @@ struct ContentView: View {
                 // MARK: - New Task Item
                 if showNewTaskItem {
                     //To Dismiss task item on tap of "SAVE"
-                  BlankView()
-                    .onTapGesture {
-                      withAnimation() {
-                        showNewTaskItem = false
-                      }
-                    }
-                  
-                  NewTaskItemView(isShowing: $showNewTaskItem)
+                    BlankView()
+                        .onTapGesture {
+                            withAnimation() {
+                                showNewTaskItem = false
+                            }
+                        }
+                    
+                    NewTaskItemView(isShowing: $showNewTaskItem)
                 }
             } //: ZSTACK
             /*

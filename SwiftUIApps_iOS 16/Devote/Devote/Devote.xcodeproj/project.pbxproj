@@ -21,6 +21,7 @@
 		8A8301F02B63D1D800660122 /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8301EF2B63D1D800660122 /* HideKeyboardExtension.swift */; };
 		8A8301F22B63E8B500660122 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8301F12B63E8B500660122 /* BackgroundImageView.swift */; };
 		8A8301F42B63EE2D00660122 /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8301F32B63EE2D00660122 /* NewTaskItemView.swift */; };
+		8A95B6E32B6CC79D003D8C38 /* ListRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95B6E22B6CC79D003D8C38 /* ListRowItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		8A8301EF2B63D1D800660122 /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 		8A8301F12B63E8B500660122 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 		8A8301F32B63EE2D00660122 /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
+		8A95B6E22B6CC79D003D8C38 /* ListRowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				8A8301F12B63E8B500660122 /* BackgroundImageView.swift */,
 				8A8301F32B63EE2D00660122 /* NewTaskItemView.swift */,
 				8A2F58D72B6A52DB00A9C9C9 /* BlankView.swift */,
+				8A95B6E22B6CC79D003D8C38 /* ListRowItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				8A8301F02B63D1D800660122 /* HideKeyboardExtension.swift in Sources */,
 				8A2F58D82B6A52DB00A9C9C9 /* BlankView.swift in Sources */,
 				8A8301E12B60E14300660122 /* Constant.swift in Sources */,
+				8A95B6E32B6CC79D003D8C38 /* ListRowItemView.swift in Sources */,
 				8A14701C2B5A872F00E5FFE8 /* Devote.xcdatamodeld in Sources */,
 				8A1470102B5A872D00E5FFE8 /* DevoteApp.swift in Sources */,
 				8A8301F42B63EE2D00660122 /* NewTaskItemView.swift in Sources */,
