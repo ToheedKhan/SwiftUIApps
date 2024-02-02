@@ -31,7 +31,9 @@ struct ContentView: View {
     // MARK: - PROPERTY
     @State var task: String = ""
     @State private var showNewTaskItem: Bool = true
-    
+    //we want to store the actual appearance permanently. Default is "Light"
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
+
     // FETCHING DATA
     @Environment(\.managedObjectContext) private var viewContext
     
@@ -87,9 +89,9 @@ struct ContentView: View {
                       // APPEARANCE BUTTON
                       Button(action: {
                         // TOGGLE APPEARANCE
-
+                          isDarkMode.toggle()
                       }, label: {
-                        Image(systemName:  "moon.circle")
+                        Image(systemName: isDarkMode ? "moon.circle.fill" :  "moon.circle")
                           .resizable()
                           .frame(width: 24, height: 24)
                           .font(.system(.title, design: .rounded))
