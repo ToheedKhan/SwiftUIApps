@@ -22,6 +22,7 @@
 		8A8301F22B63E8B500660122 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8301F12B63E8B500660122 /* BackgroundImageView.swift */; };
 		8A8301F42B63EE2D00660122 /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8301F32B63EE2D00660122 /* NewTaskItemView.swift */; };
 		8A95B6E32B6CC79D003D8C38 /* ListRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95B6E22B6CC79D003D8C38 /* ListRowItemView.swift */; };
+		8A95B6E52B6CF660003D8C38 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95B6E42B6CF660003D8C38 /* CheckboxStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		8A8301F12B63E8B500660122 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 		8A8301F32B63EE2D00660122 /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
 		8A95B6E22B6CC79D003D8C38 /* ListRowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowItemView.swift; sourceTree = "<group>"; };
+		8A95B6E42B6CF660003D8C38 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		8A14702B2B5A87E200E5FFE8 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				8A95B6E42B6CF660003D8C38 /* CheckboxStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				8A95B6E32B6CC79D003D8C38 /* ListRowItemView.swift in Sources */,
 				8A14701C2B5A872F00E5FFE8 /* Devote.xcdatamodeld in Sources */,
 				8A1470102B5A872D00E5FFE8 /* DevoteApp.swift in Sources */,
+				8A95B6E52B6CF660003D8C38 /* CheckboxStyle.swift in Sources */,
 				8A8301F42B63EE2D00660122 /* NewTaskItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
