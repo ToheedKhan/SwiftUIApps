@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-/* Preferred Color scheme - Automatic
+/* Preferred Color scheme for built-in UI elements - Automatic
  For Custom component - Manual Switch
  
  Using the preferred color scheme is ideal for all swift UI's built in user interface elements.
@@ -17,11 +17,11 @@ This is why we must work on this new task item component a little bit.
 struct NewTaskItemView: View {
     // MARK: - PROPERTY
     
-//    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     @Environment(\.managedObjectContext) private var viewContext
     @State private var task: String = ""
     @Binding var isShowing: Bool
-//
+
     private var isButtonDisabled: Bool {
       task.isEmpty
     }
@@ -59,8 +59,8 @@ struct NewTaskItemView: View {
                     .font(.system(size: 24, weight: .bold, design: .rounded))
                     .padding()
                     .background(
-                        Color(UIColor.systemGray6)
-                    )
+                        isDarkMode ? Color(UIColor.tertiarySystemBackground) : Color(UIColor.secondarySystemBackground)
+                      )
                     .cornerRadius(10)
                 
                 Button(action:  {
@@ -82,8 +82,8 @@ struct NewTaskItemView: View {
             .padding()
             .padding(.vertical, 20)
             .background(
-              Color.white
-            )
+                isDarkMode ? Color(UIColor.secondarySystemBackground) : Color.white
+              )
             .cornerRadius(16)
             .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.65), radius: 24)
             .frame(maxWidth: 640)
