@@ -23,6 +23,7 @@
 		8A8301F42B63EE2D00660122 /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8301F32B63EE2D00660122 /* NewTaskItemView.swift */; };
 		8A95B6E32B6CC79D003D8C38 /* ListRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95B6E22B6CC79D003D8C38 /* ListRowItemView.swift */; };
 		8A95B6E52B6CF660003D8C38 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95B6E42B6CF660003D8C38 /* CheckboxStyle.swift */; };
+		8AF4CB1A2B70D62500111E2A /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF4CB192B70D62500111E2A /* SoundPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		8A8301F32B63EE2D00660122 /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
 		8A95B6E22B6CC79D003D8C38 /* ListRowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowItemView.swift; sourceTree = "<group>"; };
 		8A95B6E42B6CF660003D8C38 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
+		8AF4CB192B70D62500111E2A /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				8A8301E02B60E14300660122 /* Constant.swift */,
+				8AF4CB192B70D62500111E2A /* SoundPlayer.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				8A14701C2B5A872F00E5FFE8 /* Devote.xcdatamodeld in Sources */,
 				8A1470102B5A872D00E5FFE8 /* DevoteApp.swift in Sources */,
 				8A95B6E52B6CF660003D8C38 /* CheckboxStyle.swift in Sources */,
+				8AF4CB1A2B70D62500111E2A /* SoundPlayer.swift in Sources */,
 				8A8301F42B63EE2D00660122 /* NewTaskItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
