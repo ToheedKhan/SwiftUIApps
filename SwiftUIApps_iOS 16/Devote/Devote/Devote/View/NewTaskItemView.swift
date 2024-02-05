@@ -67,6 +67,7 @@ struct NewTaskItemView: View {
                     print(isButtonDisabled)
                     addItem()
                     playSound(sound: "sound-ding", type: "mp3")
+                    feedback.notificationOccurred(.success)
                 }, label: {
                     Spacer()
                     Text("SAVE")
