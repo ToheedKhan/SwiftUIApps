@@ -35,6 +35,10 @@ To create timeline entries, we need to declare a custom type that conforms to ti
 Each entry specifies the date we would like WidgetKit to update the widget's view and any additional information that our widget needs to render the view.
 
 ## Reload Policy
+
+![Reload Policy](https://github.com/ToheedKhan/SwiftUIApps/assets/4839453/b031e346-b155-4d7f-ac72-37f949803ab5)
+
+
 The timelines Refresh policy specifies the earliest date for Widgetkit to request a new timeline from the provider.
 .atEnd - Default
 Tells Widgetkit to request a new timeline after the last date in the
@@ -57,9 +61,8 @@ When we decide to use this policy, our responsibility is to determine when updat
 Just keep in mind that widgets are not mini apps and they have limited capabilities and this is designed on purpose.
 So widgets couldn't overuse or abuse the device's energy memory and other crucial resources.
 Also note that the widgets view might not be updated precisely at a timeline entry's data and time.
----
-aa
----
+
+
 # Shared Asset
 We can add dedicated assets for a widget.
 However, there is another way to do it by sharing an existing asset of the main iOS application.
