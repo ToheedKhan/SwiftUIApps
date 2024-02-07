@@ -11,6 +11,11 @@
 		8A04A8B32B73BF0900757352 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A04A8B22B73BF0900757352 /* ContentView.swift */; };
 		8A04A8B52B73BF0A00757352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A04A8B42B73BF0A00757352 /* Assets.xcassets */; };
 		8A04A8B82B73BF0A00757352 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A04A8B72B73BF0A00757352 /* Preview Assets.xcassets */; };
+		8A04A8C22B73CCA500757352 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A04A8C12B73CCA500757352 /* CardView.swift */; };
+		8A04A8C42B73CCD900757352 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A04A8C32B73CCD900757352 /* CardModel.swift */; };
+		8A04A8C62B73CD2D00757352 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A04A8C52B73CD2D00757352 /* CardData.swift */; };
+		8A04A8C82B73CD6E00757352 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A04A8C72B73CD6E00757352 /* PlaySound.swift */; };
+		8A04A8CA2B73CDF300757352 /* sound-chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8A04A8C92B73CDF200757352 /* sound-chime.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		8A04A8B42B73BF0A00757352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A04A8B72B73BF0A00757352 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8A04A8C02B73CC4F00757352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8A04A8C12B73CCA500757352 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		8A04A8C32B73CCD900757352 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		8A04A8C52B73CD2D00757352 /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
+		8A04A8C72B73CD6E00757352 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		8A04A8C92B73CDF200757352 /* sound-chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-chime.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +62,16 @@
 		8A04A8AF2B73BF0900757352 /* LearnByDoing */ = {
 			isa = PBXGroup;
 			children = (
+				8A04A8C92B73CDF200757352 /* sound-chime.mp3 */,
 				8A04A8C02B73CC4F00757352 /* Info.plist */,
 				8A04A8B02B73BF0900757352 /* LearnByDoingApp.swift */,
 				8A04A8B22B73BF0900757352 /* ContentView.swift */,
 				8A04A8B42B73BF0A00757352 /* Assets.xcassets */,
 				8A04A8B62B73BF0A00757352 /* Preview Content */,
+				8A04A8C12B73CCA500757352 /* CardView.swift */,
+				8A04A8C32B73CCD900757352 /* CardModel.swift */,
+				8A04A8C52B73CD2D00757352 /* CardData.swift */,
+				8A04A8C72B73CD6E00757352 /* PlaySound.swift */,
 			);
 			path = LearnByDoing;
 			sourceTree = "<group>";
@@ -128,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A04A8B82B73BF0A00757352 /* Preview Assets.xcassets in Resources */,
+				8A04A8CA2B73CDF300757352 /* sound-chime.mp3 in Resources */,
 				8A04A8B52B73BF0A00757352 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A04A8C62B73CD2D00757352 /* CardData.swift in Sources */,
+				8A04A8C82B73CD6E00757352 /* PlaySound.swift in Sources */,
 				8A04A8B32B73BF0900757352 /* ContentView.swift in Sources */,
+				8A04A8C42B73CCD900757352 /* CardModel.swift in Sources */,
+				8A04A8C22B73CCA500757352 /* CardView.swift in Sources */,
 				8A04A8B12B73BF0900757352 /* LearnByDoingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

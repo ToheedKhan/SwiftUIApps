@@ -1,0 +1,21 @@
+//
+//  CardModel.swift
+//  LearnByDoing
+//
+//  Created by Toheed Jahan Khan on 07/02/24.
+//
+
+import SwiftUI
+
+
+// MARK: - CARD MODEL
+
+struct Card: Identifiable {
+  var id = UUID()
+  var title: String
+  var headline: String
+  var imageName: String
+  var callToAction: String
+  var message: String
+  var gradientColors: [Color]
+}
