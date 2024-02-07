@@ -60,3 +60,7 @@ Also note that the widgets view might not be updated precisely at a timeline ent
 ---
 aa
 ---
+# Shared Asset
+We can add dedicated assets for a widget.
+However, there is another way to do it by sharing an existing asset of the main iOS application.
+To make it happen, we need to select asset and check the checkbox option and modify the target settings in inspector pannel.
