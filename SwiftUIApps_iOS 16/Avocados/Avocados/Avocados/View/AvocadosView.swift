@@ -61,7 +61,7 @@ Avocado is a powerhouse ingredient at any meal. Enjoy these handpicked avocado r
 struct AvocadosView_Previews: PreviewProvider {
     static var previews: some View {
       AvocadosView()
-        .previewDevice("iPhone 13")
+        .previewDevice("iPhone 14")
 //        .environment(\.colorScheme, .dark)
     }
 }
