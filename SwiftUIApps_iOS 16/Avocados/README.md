@@ -17,3 +17,7 @@ We will configure the appearance variants we want to modify right now.
 In general, we use the any appearance variant to specify the color value to use on older systems that
 don't support dark mode.
 We will leave it white. Now the light appearance is also white, but in the dark appearance we want it to be black.
+
+# Custom Modifier
+
+Attaching the same set of Modifiers to Views over and over again is code repetition. we can avoid this by using Custom View Modifiers.
