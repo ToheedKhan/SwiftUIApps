@@ -11,6 +11,7 @@
 		8A04A8E82B73FF1C00757352 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A04A8E72B73FF1C00757352 /* ContentView.swift */; };
 		8A04A8EA2B73FF1E00757352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A04A8E92B73FF1E00757352 /* Assets.xcassets */; };
 		8A04A8ED2B73FF1E00757352 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A04A8EC2B73FF1E00757352 /* Preview Assets.xcassets */; };
+		8A953BEE2B85C03200E44BA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A953BED2B85C03200E44BA6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		8A04A8E72B73FF1C00757352 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8A04A8E92B73FF1E00757352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A04A8EC2B73FF1E00757352 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8A953BEC2B85BFF000E44BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8A953BED2B85C03200E44BA6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +54,12 @@
 		8A04A8E42B73FF1C00757352 /* Avocados */ = {
 			isa = PBXGroup;
 			children = (
+				8A953BEC2B85BFF000E44BA6 /* Info.plist */,
 				8A04A8E52B73FF1C00757352 /* AvocadosApp.swift */,
 				8A04A8E72B73FF1C00757352 /* ContentView.swift */,
 				8A04A8E92B73FF1E00757352 /* Assets.xcassets */,
 				8A04A8EB2B73FF1E00757352 /* Preview Content */,
+				8A953BED2B85C03200E44BA6 /* LaunchScreen.storyboard */,
 			);
 			path = Avocados;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A953BEE2B85C03200E44BA6 /* LaunchScreen.storyboard in Resources */,
 				8A04A8ED2B73FF1E00757352 /* Preview Assets.xcassets in Resources */,
 				8A04A8EA2B73FF1E00757352 /* Assets.xcassets in Resources */,
 			);
@@ -270,10 +276,12 @@
 				DEVELOPMENT_TEAM = RR6V2Z4252;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Avocados/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,10 +306,12 @@
 				DEVELOPMENT_TEAM = RR6V2Z4252;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Avocados/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
