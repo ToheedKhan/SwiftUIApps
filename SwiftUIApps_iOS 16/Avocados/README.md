@@ -25,3 +25,10 @@ Attaching the same set of Modifiers to Views over and over again is code repetit
 # Sheets
 Sheets are used to present new view controllers modally over existing ones.
 
+# Swift UI Forms
+SwiftUI rendered forms on iOS devices appear as grouped lists.
+
+Swift UI gives us a fantastic tool for building forms, collections of user input controls designed
+to gather information such as an order form or a setting screen.
+Even better, Swift UI forms automatically adapt the appearance and behavior change so they work better
+alongside other app logic.
