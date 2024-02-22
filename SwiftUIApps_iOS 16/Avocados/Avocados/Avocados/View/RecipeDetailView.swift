@@ -13,6 +13,12 @@ struct RecipeDetailView: View {
     var recipe: Recipe
     
     @State private var pulsate: Bool = false
+    
+    /*
+     when you tap on the close button that nothing happens.
+
+     We need to program this feature manually, a new environment variable for the presentation binding environment.
+     */
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -88,6 +94,10 @@ struct RecipeDetailView: View {
           VStack {
             Button(action: {
               // ACTION
+                /*
+                 The addition of wrapped value in here is required because presentation mode is actually a binding, so
+                 it can be updated automatically by the system.
+                 */
               self.presentationMode.wrappedValue.dismiss()
             }, label: {
               Image(systemName: "chevron.down.circle.fill")

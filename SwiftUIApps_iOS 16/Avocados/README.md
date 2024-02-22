@@ -21,3 +21,7 @@ We will leave it white. Now the light appearance is also white, but in the dark 
 # Custom Modifier
 
 Attaching the same set of Modifiers to Views over and over again is code repetition. we can avoid this by using Custom View Modifiers.
+
+# Sheets
+Sheets are used to present new view controllers modally over existing ones.
+
